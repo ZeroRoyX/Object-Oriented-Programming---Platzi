@@ -14,7 +14,7 @@
 The examples above are classes and objects in their simplest form, and
 are not really useful in real life applications.
 
-To understand the meaning of classes we have to understand th ebulti-in 
+To understand the meaning of classes we have to understand the built-in 
 ___init___(), which is always executed when the class is being initiated.
 
 Use the __init__() function to assign values to object properties, or 
@@ -24,12 +24,42 @@ created:
 # Create a class named Person, use the __init__() function to assign
 # values for name and age:
 
+
+# class Person:
+#     def __init__(self, name, age):
+#         self.name = name
+#         self.age = age
+
+# p1 = Person("John", 36)
+
+# print(p1.name)
+# print(p1.age)
+
+
+# Note: The __init__() function is called automatically every time the class
+# is being used to create a new object.
+
+# OBJECT METHODS
+
+"""
+Objects can also contain methods. Methods in objects are fuctions that belong
+to the object.
+
+Insert a function that prints a greeting, and execute it on the p1 object:
+"""
+
+
 class Person:
     def __init__(self, name, age):
         self.name = name
         self.age = age
+    
+    def myfunc(self):
+        print("Hello, my name is " + self.name)
 
 p1 = Person("John", 36)
+p1.myfunc()
 
-print(p1.name)
-print(p1.age)
+
+# Note: The self parameter is a reference to the current instance of the class, 
+# and is used to access variables that belong to the class.
