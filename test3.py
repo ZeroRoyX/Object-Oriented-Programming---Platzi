@@ -49,6 +49,8 @@ class Person:
     def fullname(self):
         return '{} {}'.format(self.first, self.last)
 
+    # The method (inside) can have a different name, but the setter should
+    # have the name from the method which will modify.
     @fullname.setter
     def anothername(self, name):
         self.first, self.last = name.split()
@@ -62,8 +64,8 @@ class Person:
         return '{} - {}'.format(self.fullname, self.email)
     
 p1 = Person('Juan', 'Perez', 35)
-# print(p1.email)
-# p1.anothername = 'Benito Bodoque'
+print(p1.email)
+p1.anothername = 'Benito Bodoque'
 print(p1.fullname)
 print(p1.first)
 print(p1.email)
